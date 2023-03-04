@@ -1,0 +1,231 @@
+* {
+    margin: 0;
+    padding: 0;
+
+}
+body {
+    width: 100vw;
+    height: 100vh;
+    background-color: rgb(0, 0, 0);
+}
+.wrapper {
+
+    
+    max-width: 1320px;
+    background-color: rgb(0, 0, 0);
+    left: 22.5%;
+    top: 10%;
+    position: absolute;
+    display: flex;
+    
+    align-items: center;
+    gap: 20px;
+}
+.card {
+    width: 427px;
+    max-width: 427px;
+    height: 80%;
+    background-color: #131313;
+    box-sizing: border-box;
+    transition: .1s linear;
+    position: relative;
+    display: block;
+    border: 1px solid transparent;
+}
+.card__header {
+    display: flex;
+    height: 83px;
+    align-items: center;
+    padding-top: 0;
+}
+.eee {
+    width: 10px;
+    height: 10px;
+    margin-right: 1vmin;
+    background-color: #9d241b;
+    z-index: 33;
+    clip-path: polygon(0 0, 80% 0%, 100% 0, 100% 60%, 60% 100%, 0 100%, 0% 80%, 0% 20%);
+}
+.aa {
+    width: 8px;
+    height: 8px;
+    margin-right: 0.5vmin;
+      fill: transparent;
+    stroke: #9d241b;
+    stroke-width: 20px;
+}
+.disable.tr .aa {
+    width: 8px;
+    height: 8px;
+    margin-right: 0.5vmin;
+    fill: transparent;
+    stroke: #ffffff;
+    stroke-width: 20px;
+}
+.active .aa {
+  width: 8px;
+  height: 8px;
+  margin-right: 0.5vmin;
+    fill: #9d241b;
+  stroke: #9d241b;
+  stroke-width: 20px;
+}
+.disable .aa {
+    width: 8px;
+    height: 8px;
+    margin-right: 0.5vmin;
+    fill: #ffffff;
+    stroke: #ffffff;
+    stroke-width: 20px;
+
+}
+.button {
+    position: relative;
+    z-index: 22;
+    color: #ffffff;
+    width: 364px;
+    max-width: 364px;
+         font-family: GothamPro,sans-serif; 
+        font-size: 20px;
+        line-height: 20px;
+        font-weight: 00;
+        text-transform: uppercase;
+    height: 50px;
+    margin-bottom: 5%;
+    margin-left: 7%;
+    display: inline-flex;
+    justify-content: center;
+    box-sizing: border-box;
+    border: 2px solid #9d241b;
+    align-items: center;
+
+}
+.button.actived {
+    background-color: #db3124;
+    border: 2px solid #db3124;
+}
+.button.actived::after {
+    background: linear-gradient(130deg,#db3124 20px,transparent 0,transparent);
+    transform: translateY(5px);
+}
+.button::after {
+        position: absolute;
+    right: -2px;
+    bottom: -5px;
+    left: -2px;
+    height: 4px;
+    border-top: 1px solid #9d241b;
+    background: linear-gradient(130deg,#9d241b 20px,transparent 0,transparent);
+    content: "";
+    pointer-events: none;
+    transition: transform .15s linear;
+}
+.button:hover {
+    background-color: #db3124;
+    border: 2px solid #db3124;
+}
+.button:hover::after {
+    transform: translateY(5px);
+    background: linear-gradient(130deg,#db3124 20px,transparent 0,transparent);
+    border-top: 1px solid #db3124;
+}
+.disable {
+    text-decoration:line-through;
+    opacity: 0.5;
+}
+.desc {
+    position: relative;
+    z-index: 1;
+    padding-top: 30px;
+    -webkit-padding-end: 30px;
+    padding-inline-end: 30px;
+    -webkit-padding-start: 30px;
+    padding-inline-start: 30px;
+    margin-bottom: 3vmin;
+}
+
+
+.desc ul {
+    margin-top: 0;
+    padding: 0;
+   
+    list-style: none;
+}
+.desc ul li {
+    position: relative;
+    display: block;
+    color: #fff;
+    -webkit-padding-start: 20px;
+    padding-inline-start: 20px;
+
+    margin: 1.1vmin;
+    margin-top: 0;
+    font-family: GothamPro,sans-serif;
+    font-size: 16px;
+    line-height: 22px;
+}
+
+.decor {
+    height: 2px;
+   background-color: #9d241b;
+    width: 0%;
+    transition: .2s linear;
+    position: relative;
+    z-index: 2;
+}
+.card.selected .decor {
+    width: 100%;
+}
+.img {
+   position: relative;
+   z-index: 1;
+   width: 100%;
+   pointer-events: none;
+   user-select: none;
+}
+img {
+
+ width: 100%;
+
+}
+.card__header__title {
+    font-family: GothamPro,sans-serif;
+    font-size: 25px;
+    line-height: 23px;
+    margin-left: 2vmin;
+    flex-grow: 1;
+    padding: 0;
+   
+    color: #9d241b;
+    font-weight: 700;
+    text-transform: uppercase;
+    z-index: 1;
+  
+   
+}
+.card::after {
+    position: absolute;
+    z-index: 0;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(1turn,rgba(157,36,27,.2) -9.53%,rgba(157,36,27,0) 43.9%),#131313;
+    
+    content: "";
+    opacity: 0;
+    transition: opacity .35s;
+}
+
+.card.selected::after {
+    opacity: 1;
+    z-index: 0;
+}
+.card:hover {
+    border: 1px solid #9d241b;
+    
+}
+.selected {
+    border: 1px solid #9d241b;
+    
+}
